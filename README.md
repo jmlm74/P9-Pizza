@@ -27,7 +27,9 @@ __Le PV de livraison finale :__
 ### Descriptifs et explications
 Ce projet est la suite des projets P4 et P6 que vous pouvez consulter [ici](https://github.com/jmlm74/P4-pizza1) et [ici](https://github.com/jmlm74/P6-pizza2)  
 #### Livrables : 
-[PDOCpizza_00_Introduction.pdf](/Livrables/PDOCpizza_00_Introduction.pdf) - Slide d'introduction
-[PDOCPizza_01_fonctionnelle.pdf](/Livrables/PDOCPizza_01_fonctionnelle.pdf) - Dossier de conception fonctionnelle
-
-
+[Dossier de conception fonctionnelle](/Livrables/PDOCPizza_01_fonctionnelle) - Dossier de conception fonctionnelle  
+[P9 – Dossier Conception Technique.pdf](/Livrables/P9 – Dossier Conception Technique.pdf) - Dossier de conception technique  
+[P9 – Dossier Exploitation.pdf](/Livrables/P9 – Dossier Exploitation.pdf) - Dossier d'exploitation  
+[P9 – PV Livraison.pdf](/Livrables/P9 – PV Livraison.pdf) - PV de Livraison  
+[virtualhost-ocpizza.txt](/Livrables/virtualhost-ocpizza.txt) - virtualhost  
+[diskspace.py](/Livrables/diskspace.py) - diskspace

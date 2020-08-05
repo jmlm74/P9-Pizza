@@ -1,0 +1,24 @@
+<VirtualHost *:80> 
+         ServerName www.oc-pizza.fr
+        ServerAlias oc-pizza.com www.ocpizza.com www.oc-pizza.com www.ocpizza.fr 
+        ServerAdmin webmaster@oc-pizza.fr 
+        SetEnv GOOAPI_KEY = AZERTYUIOP
+        SetEnv BRAINTREE_KEY = 1234567890
+        SetEnv NEXMO_KEY = 1234567890
+         Alias /static/ /var/www/ocpizza/staticfiles/ 
+         <Directory /var/www/ocpizza/staticfiles> 
+                Require all granted 
+        </Directory> 
+         WSGIDaemonProcess mondom.com python-home=/usr/local/venv python-path=/var/www/ocpizza home=/var/www/ocpizza 
+        WSGIProcessGroup oc-pizza.com
+        WSGIScriptAlias / /var/www/ocpizza/ocpizza/wsgi.py process-group=oc-pizza.com 
+         <Directory /var/www/ocpizza> 
+                Require all granted 
+        </Directory> 
+         <Directory /var/www/ocpizza/ocpizza> 
+                Require all granted 
+        </Directory> 
+         LogLevel warn 
+         ErrorLog    ${APACHE_LOG_DIR}/error-ocpizza.log 
+        CustomLog   ${APACHE_LOG_DIR}/access-ocpizza.log combined 
+ </VirtualHost>
