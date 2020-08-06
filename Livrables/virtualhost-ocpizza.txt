@@ -1,24 +1,43 @@
-<VirtualHost *:80> 
-         ServerName www.oc-pizza.fr
-        ServerAlias oc-pizza.com www.ocpizza.com www.oc-pizza.com www.ocpizza.fr 
-        ServerAdmin webmaster@oc-pizza.fr 
-        SetEnv GOOAPI_KEY = AZERTYUIOP
-        SetEnv BRAINTREE_KEY = 1234567890
-        SetEnv NEXMO_KEY = 1234567890
-         Alias /static/ /var/www/ocpizza/staticfiles/ 
-         <Directory /var/www/ocpizza/staticfiles> 
-                Require all granted 
-        </Directory> 
-         WSGIDaemonProcess mondom.com python-home=/usr/local/venv python-path=/var/www/ocpizza home=/var/www/ocpizza 
-        WSGIProcessGroup oc-pizza.com
-        WSGIScriptAlias / /var/www/ocpizza/ocpizza/wsgi.py process-group=oc-pizza.com 
-         <Directory /var/www/ocpizza> 
-                Require all granted 
-        </Directory> 
-         <Directory /var/www/ocpizza/ocpizza> 
-                Require all granted 
-        </Directory> 
-         LogLevel warn 
-         ErrorLog    ${APACHE_LOG_DIR}/error-ocpizza.log 
-        CustomLog   ${APACHE_LOG_DIR}/access-ocpizza.log combined 
- </VirtualHost>
+	WSGIDaemonProcess mondom.com python-home=/usr/local/venv python-path=/var/www/purbeurre home=/var/www/purbeurre
+	WSGIProcessGroup mondom.com
+	WSGIScriptAlias / /var/www/purbeurre/purbeurre/wsgi.py process-group=mondom.com
+<VirtualHost *:80>
+
+    	ServerName purbeurre.modom.com
+    	ServerAlias mondom.com
+    	ServerAdmin webmaster@modom.com
+
+	Redirect permanent / https://purbeurre.mondom.com/
+</VirtualHost>
+<VirtualHost *:443>
+
+	SSLEngine  on
+	SSLCertificateFile 	/etc/ssl/mondom/mondom.crt
+	SSLCertificateKeyFile 	/etc/ssl/mondom/mondom.key
+    	ServerName purbeurre.modom.com
+    	ServerAlias mondom.com
+    	ServerAdmin webmaster@modom.com
+
+	Alias /static/ /var/www/purbeurre/staticfiles/
+
+	<Directory /var/www/purbeurre/staticfiles>
+		Require all granted
+	</Directory>
+
+
+    	<Directory /var/www/purbeurre>
+        	Require all granted
+	</Directory>
+
+
+    	<Directory /var/www/purbeurre/purbeurre>
+        	Require all granted
+	</Directory>
+
+	LogLevel warn
+
+    	ErrorLog    ${APACHE_LOG_DIR}/error-purbeurre.log
+    	CustomLog   ${APACHE_LOG_DIR}/access-purbeurre.log combined
+
+</VirtualHost>
+
