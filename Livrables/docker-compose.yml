@@ -1,0 +1,15 @@
+version: "3"
+services:
+   ocpizza_service:
+      image: jmlm74/ocpizza:latest
+      ports:
+        - "80:80" # host:container
+        - "443:443"
+      volumes:
+        - "/var/log/docker:/var/log/apache2"
+        - "/home/ocpizza/ssl:/etc/ssl"
+        - "/home/ocpizza/conf:/etc/apache2/sites-enabled"
+      hostname: "www"
+      domainname: "ocpizza.com"
+      container_name: "ocpizza"
+      restart: always 
