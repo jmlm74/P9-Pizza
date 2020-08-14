@@ -31,5 +31,5 @@ Ce projet est la suite des projets P4 et P6 que vous pouvez consulter [ici](http
 [Dossier Conception Technique](/Livrables/PDOCPizza-02-Technique.pdf) - Dossier de conception technique  
 [Dossier Exploitation.pdf](/Livrables/PDOCPizza-03-Exploitation.pdf) - Dossier d'exploitation  
 [PV Livraison.pdf](/Livrables/PDOCPizza-04-Livraison.pdf) - PV de Livraison  
-[Présentation](/Livrables/PDOCPizza-05-Presentation.pdf) - Présentation
-[annexes](/livrables/) - Annexes et documents ci-dessus
+[Présentation](/Livrables/PDOCPizza-05-Presentation.pdf) - Présentation  
+[annexes](/Livrables) - Annexes et documents ci-dessus
